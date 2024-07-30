@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
+import CustomButton from "./CustomButton";
 
 const Hero = () => {
   return (
-    <div className='w-screen flex items-center justify-center  h-screen '>
-     <span className='font-extrabold text-9xl bg-gradient-to-b from-purple-500 to-blue-400 bg-clip-text text-transparent'> NEXT.JS 14</span>
+    <div className="hero">
+      <div className="flex-1 pt-36 padding-x">
+        <h1 className="hero__title">Find , Book , or rent a Car — Quickly and Easily</h1>
+        <p className="hero__subtitle ">
+          Streamline your car rental experience with our effortless booking process.
+        </p>
+        <CustomButton/>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
