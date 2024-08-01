@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "FlavorFusion | Discover some Culinary Delights at FlavorFusion!",
   description:
-    "Dive into detailed reviews, stunning photos, and comprehensive specifications.",
+    "Your journey to gourmet adventures and delicious recipes starts here.",
   icons: "/icon.svg",
 };
 
