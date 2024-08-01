@@ -21,7 +21,7 @@ export default function RootLayout({
         <meta property="og:image" content="/icon.svg" />
         <link rel="shortcut icon" href="/icon.svg" type="image/x-icon" />
       </head>
-      <body className="reltive">
+      <body className="relative">
         <Navbar />
         {children}
         <Footer />
