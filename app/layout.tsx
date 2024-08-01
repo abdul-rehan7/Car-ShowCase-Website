@@ -4,8 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "CAR HUB",
-  description: "Discove rthe ebst cars in the world.",
+  title: "AutoVista | Discover and explore the latest car models and innovations.",
+  description: "Dive into detailed reviews, stunning photos, and comprehensive specifications.",
 };
 
 export default function RootLayout({
