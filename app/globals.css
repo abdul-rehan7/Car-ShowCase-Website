@@ -4,11 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+  background-color: black;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Manrope", sans-serif;
+}
+.transparent-image {
+  filter: drop-shadow(5px 5px 25px rgba(255, 255, 255, 0.45));
 }
 
 /* START: General styles */
@@ -48,7 +55,7 @@
 
 @layer{
   .hero__subtitle {
-    @apply text-[27px] text-black-100 font-light mt-5;
+    @apply text-[27px] text-gray-100 font-light mt-5;
   }
 }
 
@@ -68,7 +75,7 @@
 /* START: Home styles */
 
 .home__text-container {
-  @apply flex flex-col items-start justify-start gap-y-2.5 text-black-100;
+  @apply flex flex-col items-start justify-start gap-y-2.5 text-gray-100;
 }
 
 .home__filters {
@@ -208,7 +215,7 @@
 }
 
 .search-manufacturer__input {
-  @apply w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm;
+  @apply w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-gray-200 outline-none cursor-pointer text-sm;
 }
 
 .search-manufacturer__options {

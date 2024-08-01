@@ -4,8 +4,10 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "AutoVista | Discover and explore the latest car models and innovations.",
-  description: "Dive into detailed reviews, stunning photos, and comprehensive specifications.",
+  title: "FlavorFusion | Discover some Culinary Delights at FlavorFusion!",
+  description:
+    "Dive into detailed reviews, stunning photos, and comprehensive specifications.",
+  icons: "/icon.svg",
 };
 
 export default function RootLayout({
@@ -15,11 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:image" content="/icon.svg" />
+        <link rel="shortcut icon" href="/icon.svg" type="image/x-icon" />
+      </head>
       <body className="reltive">
-        <Navbar/>
+        <Navbar />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }

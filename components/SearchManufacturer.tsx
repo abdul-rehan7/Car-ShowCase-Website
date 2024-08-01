@@ -1,6 +1,6 @@
 "use client";
 
-import { SearchManufacturerProps } from "@/types";
+import { SearchfoodProps } from "@/types";
 import Image from "next/image";
 import {
   Combobox,
@@ -11,19 +11,19 @@ import {
   ComboboxOptions,
 } from "@headlessui/react";
 import React from "react";
-import { manufacturers } from "@/constants";
+import { foods } from "@/constants";
 import { useState, Fragment } from "react";
 
-const SearchManufacturer = ({
-  manufacturer,
-  setManufacturer,
-}: SearchManufacturerProps) => {
+const Searchfood = ({
+  food,
+  setfood,
+}: SearchfoodProps) => {
   const [query, setquery] = useState("");
 
-  const filteredManufacturers =
+  const filteredfoods =
     query === ""
-      ? manufacturers
-      : manufacturers.filter((item) =>
+      ? foods
+      : foods.filter((item) =>
           item
             .toLocaleLowerCase()
             .replace(/\s+/g, "")
@@ -46,12 +46,12 @@ const SearchManufacturer = ({
           <ComboboxInput
             className="search-manufacturer__input "
             placeholder="Search..."
-            displayValue={(manufacturer: string) => manufacturer}
+            displayValue={(food: string) => food}
             onChange={(e) => setquery(e.target.value)}
           />
           <Transition as={Fragment}>
             <ComboboxOptions>
-              {filteredManufacturers.length == 0 && query != "" ? (
+              {filteredfoods.length == 0 && query != "" ? (
                 <ComboboxOption
                   value={query}
                   className="search-manufacturer__option"
@@ -59,13 +59,13 @@ const SearchManufacturer = ({
                   Create "{query}"
                 </ComboboxOption>
               ) : (
-                filteredManufacturers.map((item) => (
+                filteredfoods.map((item) => (
                   <ComboboxOption
                     value={item}
                     key={item}
                     className={({ active }) =>
                       `relative ${
-                        active ? "bg-primary-blue text-white px-2 py-3" : "text-gray-900 px-2 py-3"
+                        active ? "bg-primary-blue text-black px-2 py-3" : "text-black px-2 py-3"
                       } `
                     }
                   >
@@ -81,4 +81,4 @@ const SearchManufacturer = ({
   );
 };
 
-export default SearchManufacturer;
+export default Searchfood;
