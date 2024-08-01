@@ -56,7 +56,7 @@ const Searchfood = ({
                   value={query}
                   className="search-manufacturer__option"
                 >
-                  Create "{query}"
+                  Create {query}
                 </ComboboxOption>
               ) : (
                 filteredfoods.map((item) => (
