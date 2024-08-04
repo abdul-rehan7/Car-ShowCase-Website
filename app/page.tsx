@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import SearchBar from "@/components/SearchBar";
 import { fetchFoods } from "@/utils";
 import CarCard from "@/components/ThreeDCard";
 
@@ -16,9 +15,7 @@ export default async function Home() {
           <h1 className="text-4xl font-extrabold">Food Catalogue</h1>
           <p>Search the Meal You want to Grab</p>
         </div>
-        <div className="home__filters">
-          <SearchBar />
-        </div>
+    
         {!isDataEmpty ? (
           <section className="text-white">
             <div className="home__foods-wrapper">

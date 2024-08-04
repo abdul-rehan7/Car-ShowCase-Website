@@ -25,7 +25,7 @@ const Hero = () => {
         />
       </div>
       <div className="hero__image-container">
-        <div className="hero__image">
+        <div className="hero__image object-center object-cover">
           <ImagesSliderDemo />
         </div>
       </div>

@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-between items-center flex-wrap mt-10 border-t border-gray-600 sm:px-16 px-6 py-10 ">
+      <div className="flex flex-between text-sm lg:text-base items-center flex-wrap mt-10 border-t border-gray-600 sm:px-16 px-6 py-10 ">
         <p>@2024 FlavorFusion. All Rights Reserved</p>
         <div className="footer__copyrights-link">
           <Link href={"/"} className="text-gray-100 ">
