@@ -63,11 +63,11 @@ body{
 
 
 .hero__image-container {
-  @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
+  @apply xl:flex-[1.5] my-7 flex justify-end items-end w-full xl:h-screen;
 }
 
 .hero__image {
-  @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
+  @apply relative flex justify-center items-center xl:w-full w-[100vw] xl:h-full h-[590px] z-0;
 }
 
 @layer{

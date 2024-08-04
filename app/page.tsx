@@ -1,5 +1,4 @@
 import Hero from "@/components/Hero";
-import CustomFilter from "@/components/CustomFilter";
 import SearchBar from "@/components/SearchBar";
 import { fetchFoods } from "@/utils";
 import CarCard from "@/components/ThreeDCard";
@@ -19,10 +18,6 @@ export default async function Home() {
         </div>
         <div className="home__filters">
           <SearchBar />
-          <div className="home__filter-container">
-            <CustomFilter />
-            <CustomFilter />
-          </div>
         </div>
         {!isDataEmpty ? (
           <section className="text-white">
