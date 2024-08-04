@@ -1,9 +1,14 @@
-import Image from "next/image";
 import Hero from "@/components/Hero";
 import CustomFilter from "@/components/CustomFilter";
 import SearchBar from "@/components/SearchBar";
+import { fetchFoods } from "@/utils";
+import CarCard from "@/components/ThreeDCard";
 
-export default function Home() {
+export default async function Home() {
+  const allFoods = await fetchFoods();
+
+  const isDataEmpty = !Array.isArray(allFoods) || !allFoods;
+
   return (
     <main className="overflow-hidden ">
       <Hero />
@@ -19,6 +24,20 @@ export default function Home() {
             <CustomFilter />
           </div>
         </div>
+        {!isDataEmpty ? (
+          <section className="text-white">
+            <div className="home__foods-wrapper">
+              {allFoods.slice(0, 8).map((food) => (
+                <CarCard key={food.id} food={food} />
+              ))}
+            </div>
+          </section>
+        ) : (
+          <div>
+            <h2>OOPS, No Results</h2>
+            <p></p>
+          </div>
+        )}
       </div>
     </main>
   );

@@ -29,6 +29,7 @@ module.exports = {
         'hero-bg': "url('/hero-bg.png')"
       }
     },
+    
   },
   plugins: [],
 };

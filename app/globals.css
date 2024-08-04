@@ -8,6 +8,9 @@ body{
   background-color: black;
 }
 
+/* Example CSS for ensuring one card per row */
+
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +18,7 @@ body{
   font-family: "Manrope", sans-serif;
 }
 .transparent-image {
-  filter: drop-shadow(5px 5px 25px rgba(255, 255, 255, 0.45));
+  filter: drop-shadow(5px 5px 7px rgba(255, 255, 255, 0.45));
 }
 
 /* START: General styles */
@@ -53,11 +56,11 @@ body{
   @apply 2xl:text-[72px] sm:text-[64px] text-[50px] font-extrabold;
 }
 
-@layer{
+
   .hero__subtitle {
     @apply text-[27px] text-gray-100 font-light mt-5;
   }
-}
+
 
 .hero__image-container {
   @apply xl:flex-[1.5] flex justify-end items-end w-full xl:h-screen;
@@ -67,8 +70,10 @@ body{
   @apply relative xl:w-full w-[90%] xl:h-full h-[590px] z-0;
 }
 
-.hero__image-overlay {
-  @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
+@layer{
+  .hero__image-overlay {
+    @apply absolute xl:-top-24 xl:-right-1/2 -right-1/4 bg-hero-bg bg-repeat-round -z-10 w-full xl:h-screen h-[590px] overflow-hidden;
+  }
 }
 /* END: Hero styles */
 
@@ -86,8 +91,8 @@ body{
   @apply flex justify-start flex-wrap items-center gap-2;
 }
 
-.home__cars-wrapper {
-  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
+.home__foods-wrapper {
+  @apply grid 2xl:grid-cols-2 xl:grid-cols-2 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14;
 }
 
 .home__error-container {
@@ -96,16 +101,17 @@ body{
 /* END: Home styles */
 
 /* START: Car Card styles */
-.car-card {
-  @apply flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl;
+.food-card {
+  @apply flex flex-col h-[80vh] w-[50vw] justify-start text-left text-black-100 bg-[#eaeaea] hover:bg-white hover:shadow-md rounded-xl;
 }
 
-.car-card__content {
-  @apply w-full flex justify-between items-start gap-2;
+
+.food-card__content {
+  @apply h-full flex text-black justify-between items-start gap-7;
 }
 
-.car-card__content-title {
-  @apply text-[22px] leading-[26px] font-bold capitalize;
+.food-card__content-title {
+  @apply text-lg leading-[30px] font-bold  capitalize;
 }
 
 .car-card__price {
@@ -201,11 +207,11 @@ body{
 }
 
 .searchbar__item {
-  @apply flex-1 max-sm:w-full flex justify-start items-center relative;
+  @apply flex-1 max-sm:w-full flex bg-gray-100 justify-start items-center relative;
 }
 
 .searchbar__input {
-  @apply w-full h-[48px] pl-12 p-4 bg-light-white rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm;
+  @apply w-full h-[48px] bg-gray-100 pl-7 p-4  rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm;
 }
 /* END: searchbar styles */
 

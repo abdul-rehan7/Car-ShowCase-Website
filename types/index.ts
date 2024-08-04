@@ -1,13 +1,16 @@
 import { MouseEventHandler } from "react";
 
-export interface CustomButtonProps  {
-title: string,
-containerStyles:string,
-handleClick?:MouseEventHandler<HTMLButtonElement>
-btnType: "button" | "submit" 
+export interface CustomButtonProps {
+  title: string;
+  containerStyles: string;
+  handleClick?: MouseEventHandler<HTMLButtonElement>;
+  btnType: "button" | "submit";
 }
 
-export interface SearchfoodProps{
-    food:string,
-    setfood:(food:string) => void;
+export interface foodProps {
+  id: number;
+  name: string;
+  price: string;
+  description: string;
+  img: string;
 }

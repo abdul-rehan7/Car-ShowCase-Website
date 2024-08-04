@@ -32,7 +32,7 @@ const Searchfood = ({
 
   return (
     <div className="search-manufacturer">
-      <Combobox>
+      <Combobox value={food} onChange={setfood}>
         <div className="relative w-full">
           <ComboboxButton className="absolute top-[14px]">
             <Image
